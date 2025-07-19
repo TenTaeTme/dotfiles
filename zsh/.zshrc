@@ -10,6 +10,7 @@ export GOROOT=/usr/local/go
 export PATH=$PATH:$GOPATH
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+[[ -f $HOME/dotfiles/zsh/.zshrc.local ]] && source $HOME/dotfiles/zsh/.zshrc.local
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,

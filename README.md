@@ -1,4 +1,4 @@
-# spik_13 / dotfiles
+# TenTaeTme / dotfiles
 
 One repository to rule my macOS & Linux configs:
 
@@ -28,7 +28,7 @@ Each directory is a **Stow package** that symlinks its contents to the exact pat
 1. **Clone** the repo into `~/dotfiles`
 
    ```bash
-   git clone --depth 1 https://github.com/spik-13/dotfiles.git ~/dotfiles
+   git clone --depth 1 https://github.com/TenTaeTme/dotfiles.git ~/dotfiles
    cd ~/dotfiles
    ```
 
@@ -91,7 +91,7 @@ git config --global core.excludesFile ~/.gitignore_global
 ## 4 · Updating & contributing
 
 1. Edit files in place inside `~/dotfiles/<package>/…`.
-2. Re‑run the matching `stow -t …` if you added new files.
+2. Re‑run the matching `stow -t …` if you add new files.
 3. Commit & push:
 
    ```bash
@@ -115,4 +115,4 @@ git config --global core.excludesFile ~/.gitignore_global
 
 ### Licence
 
-MIT © spik_13 — fork, patch, enjoy.
+MIT © TenTaeTme — fork, patch, enjoy.

@@ -98,6 +98,100 @@ git config --global core.excludesFile ~/.gitignore_global
 
 ---
 
+# tmux — quick‑start & key sheet 🧠🔋
+
+## 1 · Launch a session
+
+```bash
+tmux new -s <name>       # e.g. tmux new -s demo
+```
+
+Starts a new multiplexer named **demo** and drops you in window 1.
+
+---
+
+## 2 · Detach & come back
+
+| Action                      | Keys / Command     |
+| --------------------------- | ------------------ |
+| Detach from current session | **Ctrl-A d**       |
+| List sessions               | `tmux ls`          |
+| Re‑attach to last session   | `tmux a`           |
+| Attach to a specific one    | `tmux a -t <name>` |
+
+---
+
+## 3 · Create / move between windows
+
+| Action              | Keys         |
+| ------------------- | ------------ |
+| New window          | **Ctrl‑A c** |
+| Next window         | **Ctrl‑A l** |
+| Previous window     | **Ctrl‑A h** |
+| Jump to last window | **Tab**      |
+| Rename window       | **Ctrl‑A ,** |
+
+Windows are numbered from **1**; the status bar shows them as `1:zsh 2:vim …`.
+
+---
+
+## 4 · Split & navigate panes
+
+| Split                      | Key                         | Navigate | Key          |
+| -------------------------- | --------------------------- | -------- | ------------ |
+| Horizontal (stack)         | **Ctrl‑A -**                | Left     | **Ctrl‑A h** |
+| Vertical (side‑by‑side)    | **Ctrl‑A \_**               | Down     | **Ctrl‑A j** |
+|                            |                             | Up       | **Ctrl‑A k** |
+|                            |                             | Right    | **Ctrl‑A l** |
+| Swap with next / prev pane | **Ctrl‑A >** / **Ctrl‑A <** |
+| Resize pane (2 cells)      | **Ctrl‑A Shift‑H/J/K/L**    |
+
+---
+
+## 5 · Copy‑mode & clipboard (macOS)
+
+| Action               | Keys          |
+| -------------------- | ------------- |
+| Enter copy‑mode      | **Ctrl‑A [`** |
+| Start selection      | **v**         |
+| Copy & leave         | **y**         |
+| Paste in another app | **⌘‑V**       |
+
+tmux pipes the selection to `pbcopy`, so it lands in the OS clipboard.
+
+---
+
+## 6 · Session housekeeping
+
+| Task                        | How                     |
+| --------------------------- | ----------------------- |
+| Reload `~/.tmux.conf`       | **Ctrl‑A r**            |
+| Edit config in a new window | **Ctrl‑A e**            |
+| Kill current pane           | `exit` or **Ctrl‑D**    |
+| Kill current window         | `Ctrl‑A : kill-window`  |
+| Kill whole session          | `Ctrl‑A : kill-session` |
+
+(The prompt opens with **Ctrl‑A :**.)
+
+---
+
+## 7 · Understanding the status bar
+
+```
+❐ demo ▶ 1:zsh 2:vim 🔋 82 % | 🧠 48 %  18:42 | 20 Jul
+│ │   │              │          │            │
+│ │   │              │          │            └── clock & date
+│ │   │              │          └────────────── RAM used (%)
+│ │   │              └───────────────────────── battery (%)
+│ │   └──────────────────────────────────────── windows list
+│ └──────────────────────────────────────────── session name
+└────────────────────────────────────────────── separators
+```
+
+Prefix is **Ctrl‑A** — **Ctrl‑B** is unbound.
+
+Happy multiplexing! 🪄
+
 ### Licence
 
 MIT © TenTaeTme

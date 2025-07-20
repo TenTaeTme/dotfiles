@@ -1,1 +1,3 @@
 zsh/.zshrc.local
+# ignore tmux logs
+tmux-*.log

@@ -109,3 +109,8 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export FZF_BASE=$HOME/.fzf
+[ -f $FZF_BASE/shell/key-bindings.zsh ] && source $FZF_BASE/shell/key-bindings.zsh
+[ -f $FZF_BASE/shell/completion.zsh ] && source $FZF_BASE/shell/completion.zsh
+export GEM_HOME="$HOME/.gem"
+export PATH="$GEM_HOME/bin:$PATH"

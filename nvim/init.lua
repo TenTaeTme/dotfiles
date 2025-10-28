@@ -34,8 +34,8 @@ vim.g.clipboard = {
 		["*"] = "clip.exe",
 	},
 	paste = {
-		["+"] = "powershell.exe -NoProfile -Command Get-Clipboard",
-		["*"] = "powershell.exe -NoProfile -Command Get-Clipboard",
+		["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r`n","`n"))',
+		["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r`n","`n"))',
 	},
 	cache_enabled = false,
 }

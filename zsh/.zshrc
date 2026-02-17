@@ -114,3 +114,7 @@ export FZF_BASE=$HOME/.fzf
 [ -f $FZF_BASE/shell/completion.zsh ] && source $FZF_BASE/shell/completion.zsh
 export GEM_HOME="$HOME/.gem"
 export PATH="$GEM_HOME/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

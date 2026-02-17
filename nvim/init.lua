@@ -28,14 +28,14 @@ vim.cmd("highlight Character ctermfg=green guifg=#f5983a")
 vim.opt.clipboard:append("unnamedplus")
 
 vim.g.clipboard = {
-	name = "WslClipboard",
+	name = "win32yank-wsl",
 	copy = {
-		["+"] = "clip.exe",
-		["*"] = "clip.exe",
+		["+"] = "win32yank.exe -i --crlf",
+		["*"] = "win32yank.exe -i --crlf",
 	},
 	paste = {
-		["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r`n","`n"))',
-		["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r`n","`n"))',
+		["+"] = "win32yank.exe -o --lf",
+		["*"] = "win32yank.exe -o --lf",
 	},
-	cache_enabled = false,
+	cache_enabled = 0,
 }
